@@ -2,12 +2,10 @@
 
 import React, { useState, useEffect } from 'react'; // Importar React explícitamente
 import { useNavigate } from 'react-router-dom';
-
 import { Dialog } from '@headlessui/react';
 
 export default function NotaModal() {
   const navigate = useNavigate(); // Hook para navegación
-
 
   const [open, setOpen] = useState(false);
   const [nombre, setNombre] = useState('');
@@ -57,12 +55,13 @@ export default function NotaModal() {
       setSuccess('Nota guardada con éxito');
       setNota('');
       setNombre('');
-      navigate("/nota")
+      navigate('/notas');
 
-      // Limpiar el estado después de guardar sin recargar la página
+      // Limpiar el estado después de guardar y recargar la página sin recargar la página
       setTimeout(() => {
         setSuccess('');
         setOpen(false); // Cerrar modal automáticamente después de un breve retraso
+        window.location.reload(); // Recargar la página después de cerrar el modal
       }, 1500);
 
     } catch (err) {
@@ -118,7 +117,7 @@ export default function NotaModal() {
 
               {error && <p className="text-red-500 text-center">{error}</p>}
               {success && <p className="text-green-500 text-center">{success}</p>}
-              {usuarioId && <p className="text-gray-600">ID de usuario: {usuarioId}</p>} 
+              {usuarioId && <p className="text-gray-600">ID de usuario: {usuarioId}</p>}
 
               <div className="flex w-full justify-center space-x-4">
                 <button
