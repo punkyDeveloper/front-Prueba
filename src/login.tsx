@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-
+console.log(import.meta.env.VITE_URL_web)
   const navigate = useNavigate(); // Hook para navegación
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
