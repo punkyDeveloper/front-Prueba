@@ -79,7 +79,7 @@ export default function Notas() {
   }
 
   return (
-    <div className="flex flex-wrap justify-center p-4">
+    <div className="flex flex-wrap justify-center p-4 text-black">
       {notas.map((nota) => (
         <div key={nota._id} className="w-64 h-64 rounded-lg overflow-hidden shadow-lg m-2 bg-white flex flex-col">
           <div className="p-4 flex-grow">

@@ -8,12 +8,15 @@ export default function Example() {
     return (
 
         <>
+        <div className="  justify-center min-h-screen bg-gray-900 text-white">
+
                 <Nav/>
 
 
                 <Crearnota />
 
                 <Notas />
+        </div>
 
 
         </>

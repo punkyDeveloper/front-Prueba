@@ -80,7 +80,7 @@ export default function NotaModal() {
         Crear Nota
       </button>
 
-      <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
+      <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10 text-white">
         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
         <div className="fixed inset-0 z-10 flex items-center justify-center p-4">
           <Dialog.Panel className="relative w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl transition-all">
