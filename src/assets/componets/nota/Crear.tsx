@@ -1,10 +1,14 @@
 'use client';
 
 import React, { useState, useEffect } from 'react'; // Importar React explícitamente
+import { useNavigate } from 'react-router-dom';
 
 import { Dialog } from '@headlessui/react';
 
 export default function NotaModal() {
+  const navigate = useNavigate(); // Hook para navegación
+
+
   const [open, setOpen] = useState(false);
   const [nombre, setNombre] = useState('');
   const [nota, setNota] = useState('');
@@ -53,6 +57,7 @@ export default function NotaModal() {
       setSuccess('Nota guardada con éxito');
       setNota('');
       setNombre('');
+      navigate("/nota")
 
       // Limpiar el estado después de guardar sin recargar la página
       setTimeout(() => {
