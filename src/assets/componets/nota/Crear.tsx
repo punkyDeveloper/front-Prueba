@@ -55,7 +55,7 @@ export default function NotaModal() {
       setSuccess('Nota guardada con éxito');
       setNota('');
       setNombre('');
-      navigate('/notas');
+      navigate('/nota');
 
       // Limpiar el estado después de guardar y recargar la página sin recargar la página
       setTimeout(() => {
