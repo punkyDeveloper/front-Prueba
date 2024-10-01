@@ -24,6 +24,12 @@ export default function Example() {
     return classes.filter(Boolean).join(' ');
   }
 
+  function handleSignOut() {
+    localStorage.clear();
+    // Redirigir al usuario a la página de inicio de sesión o inicio
+    window.location.href = '/';
+  }
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -61,22 +67,12 @@ export default function Example() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <Menu as="div" className="relative ml-3">
-              <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                {/* Añade tu icono de usuario o perfil aquí */}
-              </Menu.Button>
-              <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none">
-                <Menu.Item>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
-                </Menu.Item>
-                <Menu.Item>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-                </Menu.Item>
-                <Menu.Item>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
-                </Menu.Item>
-              </Menu.Items>
-            </Menu>
+            <button
+              onClick={handleSignOut}
+              className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+            >
+              Salir
+            </button>
           </div>
         </div>
       </div>
