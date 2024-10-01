@@ -144,14 +144,14 @@ export default function Profile() {
           <Eliminar
               isOpen={isModalOpen}
               onClose={() => setIsModalOpen(false)}
-              onConfirm={handleDeleteAccount} // Cambiado para llamar a la función correctamente
+              onConfirm={handleDeleteAccount} 
           />
 
           {/* Componente de Modal de Actualización */}
           <Actualizar
               isOpen={isUpdateModalOpen}
               onClose={() => setIsUpdateModalOpen(false)}
-              onConfirm={handleUpdateAccount} // Modificado para manejar correctamente la actualización
+              onConfirm={handleUpdateAccount} 
               userId={user.id}
               userName={user.name}
               userEmail={user.email}
