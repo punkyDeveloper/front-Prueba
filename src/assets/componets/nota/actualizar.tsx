@@ -58,7 +58,7 @@ const Actualizar: React.FC<ActualizarProps> = ({ notaId, onUpdateSuccess, onClos
       onClose(); // Cierra el modal
     } catch (err) {
       setError('Error al actualizar la nota.');
-      console.error(err); // Agregar para ver el error en la consola
+      console.error(err); 
     }
   };
 
